@@ -4,7 +4,7 @@ import Select from "../Select";
 import Button from "../Button";
 import { useState } from 'react';
 
-const Form = () => {
+const Form = (props) => {
 
     const times = ['Programação', 'Front-End', 'Data Science', 'Devops', 'UX Desing', 'Mobile', 'Inovação e Gestão']
 
@@ -15,7 +15,12 @@ const Form = () => {
 
     const save = (e) => {
         e.preventDefault();
-        console.log(`Nome: ${nome} \nCargo: ${cargo} \nImagem: ${imagem} \nTime: ${time}`)
+        props.registeredEmployee({
+            nome,
+            cargo,
+            imagem,
+            time,
+        })
     }
 
     return (
