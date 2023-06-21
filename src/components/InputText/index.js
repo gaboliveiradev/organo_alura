@@ -1,10 +1,16 @@
+import { useState } from 'react';
 import './InputText.css';
 
 const InputText = (props) => {
-    return (
+
+    const toType = (e) => {
+        props.toChanged(e.target.value);
+    }
+
+    return (        
         <div className='text-field'>
             <label>{props.label}</label>
-            <input required={props.required} type='text' placeholder={props.placeholder} />
+            <input value={props.valor} onChange={toType} required={props.required} type='text' placeholder={props.placeholder} />
         </div>
     )
 }
