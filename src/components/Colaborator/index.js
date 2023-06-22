@@ -1,15 +1,15 @@
 import React from 'react';
 import './Colaborator.css'
 
-export default function Colaborator(props) {
+export default function Colaborator({nome, imagem, cargo}) {
     return (
         <div className='colaborador'>
             <div className='cabecalho'>
-                <img src='https://github.com/gaboliveiradev.png' alt='Gabriel Oliveira' />
+                <img src={imagem} alt={nome} />
             </div>
             <div className='rodape'>
-                <h4>Gabriel Oliveira</h4>
-                <h5>Full Stack Developer</h5>
+                <h4>{nome}</h4>
+                <h5>{cargo}</h5>
             </div>
         </div>
     )
