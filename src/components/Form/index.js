@@ -5,9 +5,6 @@ import Button from "../Button";
 import { useState } from 'react';
 
 const Form = (props) => {
-
-    const times = ['Programação', 'Front-End', 'Data Science', 'Devops', 'UX Desing', 'Mobile', 'Inovação e Gestão']
-
     const [nome, setNome] = useState('');
     const [cargo, setCargo] = useState('');
     const [imagem, setImagem] = useState('');
@@ -50,7 +47,7 @@ const Form = (props) => {
                 <Select 
                     required={true} 
                     label="Time" 
-                    itens={times}
+                    itens={props.times}
                     valor={time}
                     toChanged={valor => setTime(valor)}
                 />
