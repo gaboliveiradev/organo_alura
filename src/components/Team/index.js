@@ -4,6 +4,8 @@ import Colaborator from '../Colaborator';
 
 export default function Team(props) {
     return(
+        (props.colaboradores.length > 0)
+        ? 
         <section className='team' style={{backgroundColor: props.corSecundaria}}>
             <h3 style={{borderBottom: '4px solid' + props.corPrimaria}}>{props.nome}</h3>
             <div className='colaboradores'>
@@ -14,5 +16,6 @@ export default function Team(props) {
                 />)}
             </div>
         </section>
+        : ''
     )
 }
